@@ -1,20 +1,22 @@
 # name: FishFace
 
-function _git_branch_name
-  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
-end
-
 function _is_git_dirty
-  echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+  test (command git status -s --ignore-submodules=dirty ^/dev/null | wc -l) -gt 0
+  return $status
 end
 
 function fish_prompt
-  set -l blue (set_color -o blue)
-  set -l green (set_color -o green)
-
-  if [ (_git_branch_name) ]
-    echo -n -s "$green><(((\"> "
+  if test "$status" != "0"
+    set_color -o red
+  else if git rev-parse ^/dev/null
+    if _is_git_dirty
+      set_color -o yellow
+    else
+      set_color -o green
+    end
   else
-    echo -n -s "$blue><(((\"> "
+    set_color -o blue
   end
+  echo -n '><((("> '
+  set_color normal
 end

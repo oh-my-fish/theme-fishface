@@ -1,5 +1,20 @@
 ## FishFace
 
-Shows an ASCII fish which is blue or green when in a git repo.
+Shows an ASCII fish instead of a prompt.
 
-![fishface theme](https://f.cloud.github.com/assets/66143/1224622/ec9660d8-2750-11e3-9c96-cb7a5a69eada.png)
+![screenshot](https://cloud.githubusercontent.com/assets/10598847/14987594/dcc882d6-1158-11e6-9612-11f0ceacec07.png)
+
+### Fish colors
+
+| Color | Meaning |
+| --- | --- |
+| Blue | Normal |
+| Green | In a git repo |
+| Yellow | Git repo dirty |
+| Red | Last command exited non-zero |
+
+### Installation
+
+```
+omf install fishface
+```
