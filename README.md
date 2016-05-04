@@ -2,16 +2,22 @@
 
 Shows an ASCII fish instead of a prompt.
 
-![screenshot](https://cloud.githubusercontent.com/assets/10598847/14987594/dcc882d6-1158-11e6-9612-11f0ceacec07.png)
+![screenshot](https://cloud.githubusercontent.com/assets/10598847/15026896/6ea5d9ec-1249-11e6-9144-58fccbc28b72.png)
 
 ### Fish colors
 
+(in order of precedence)
+
 | Color | Meaning |
 | --- | --- |
-| Blue | Normal |
-| Green | In a git repo |
+| Light Red | Last command exited non-zero |
+| Peach | There are background jobs running |
 | Yellow | Git repo dirty |
-| Red | Last command exited non-zero |
+| Green | In a git repo |
+| Light Blue | In Python virtualenv |
+| Purple | Running as root |
+| Orange | Directory not writable |
+| Blue | Normal |
 
 ### Installation
 
