@@ -24,3 +24,8 @@ Shows an ASCII fish instead of a prompt.
 ```
 omf install fishface
 ```
+
+### Configuration
+
+In the beginning of the prompt script, there are some variable definitions. These can customise the colors. For example, if you want the fish to turn red when in a git repo, you would edit the line with `set -g fishface_git_color ...` to `set -g fishface_git_color red`.  
+You can also disable particular things, for example if you don't want the fish to change color when a virtualenv is active, you would comment out the line with `set -g fishface_display_virtual_env 1`.
