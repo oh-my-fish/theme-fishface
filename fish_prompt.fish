@@ -15,7 +15,7 @@ function fish_prompt
 
   if [ (_git_branch_name) ]
     if [ (_is_git_dirty) ]
-	  echo -n -s "$red><(((\"> "
+      echo -n -s "$red><(((\"> "
     else
       echo -n -s "$green><(((\"> "
     end
